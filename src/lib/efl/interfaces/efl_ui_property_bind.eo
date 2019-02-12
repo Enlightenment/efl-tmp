@@ -13,6 +13,7 @@ interface @beta Efl.Ui.Property_Bind
             key: string; [[key string for bind model property data]]
             property: string; [[Model property name]]
          }
+         return: bool; [[$true when it succeed, $false otherwise.]]
       }
    }
 }
