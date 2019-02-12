@@ -1,7 +1,7 @@
 import efl_ui;
 
 class @beta Efl.Ui.Layout extends Efl.Ui.Widget implements Efl.Container, Efl.File,
-                     Efl.Ui.View, Efl.Ui.Property_Bind, Efl.Ui.Factory_Bind,
+                     Efl.Ui.Factory_Bind,
                      Efl.Layout.Calc, Efl.Layout.Signal,
                      Efl.Layout.Group
 {
@@ -75,7 +75,7 @@ class @beta Efl.Ui.Layout extends Efl.Ui.Widget implements Efl.Container, Efl.Fi
       Efl.Container.content_remove;
       Efl.Container.content_iterate;
       Efl.Part.part_get;
-      Efl.Ui.View.model { get; set; }
+      Efl.Ui.View.model { set; }
       Efl.Ui.Property_Bind.property_bind;
       Efl.Ui.Factory_Bind.factory_bind;
    }
