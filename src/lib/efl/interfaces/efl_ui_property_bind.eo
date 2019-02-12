@@ -1,3 +1,9 @@
+struct Efl.Ui.Property_Event {
+   [[EFL Ui property event data structure triggered when an object property change due
+     to the interaction on the object.]]
+   changed_properties: array<stringshare>; [[List of changed properties]]
+}
+
 interface @beta Efl.Ui.Property_Bind
 {
    [[Efl UI Property_Bind interface.
@@ -15,5 +21,9 @@ interface @beta Efl.Ui.Property_Bind
          }
          return: bool; [[$true when it succeed, $false otherwise.]]
       }
+   }
+   events {
+      properties,changed: Efl.Ui.Property_Event; [[Event dispatched when a property on the object changed due to an interaction on the object.]]
+      property,bound: stringshare; [[Event dispatched when a property on the object is bound to a model. This is useful to not overgenerate event.]]
    }
 }
