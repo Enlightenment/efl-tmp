@@ -2286,6 +2286,7 @@ _efl_ui_layout_efl_ui_property_bind_property_bind(Eo *obj, Efl_Ui_Layout_Data *p
 {
    EINA_SAFETY_ON_NULL_RETURN_VAL(key, EINA_FALSE);
    Eina_Stringshare *sprop;
+   Eina_Stringshare *sk;
    Eina_Hash *hash = NULL;
    char *data = NULL;
    Efl_Model *model;
@@ -2333,6 +2334,10 @@ _efl_ui_layout_efl_ui_property_bind_property_bind(Eo *obj, Efl_Ui_Layout_Data *p
         else
           _efl_ui_layout_view_model_property_update(pd, data, sprop);
      }
+
+   sk = eina_stringshare_add(key);
+   efl_event_callback_call(obj, EFL_UI_PROPERTY_BIND_EVENT_PROPERTY_BOUND, (void*) sk);
+   eina_stringshare_del(sk);
 
    if (!sprop)
      free(data);

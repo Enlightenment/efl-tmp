@@ -119,9 +119,13 @@ static Eina_Bool
 _efl_ui_widget_factory_efl_ui_property_bind_property_bind(Eo *obj, Efl_Ui_Widget_Factory_Data *pd,
                                                           const char *target, const char *property)
 {
-   if (!strcmp(target, "style"))
+   static Eina_Stringshare *style = NULL;
+   if (!style) style = eina_stringshare_add("style");
+
+   if (style == target || !strcmp(target, "style"))
      {
         eina_stringshare_replace(&pd->style, property);
+        efl_event_callback_call(obj, EFL_UI_PROPERTY_BIND_EVENT_PROPERTY_BOUND, (void*) style);
         return EINA_TRUE;
      }
 

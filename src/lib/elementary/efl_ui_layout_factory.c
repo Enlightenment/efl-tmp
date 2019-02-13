@@ -130,6 +130,8 @@ _efl_ui_layout_factory_efl_ui_property_bind_property_bind(Eo *obj EINA_UNUSED, E
    Eina_Stringshare *ss_key, *ss_prop, *ss_old;
    ss_key = eina_stringshare_add(key);
 
+   efl_event_callback_call(obj, EFL_UI_PROPERTY_BIND_EVENT_PROPERTY_BOUND, (void*) ss_key);
+
    if (property == NULL)
      {
         eina_hash_del(pd->bind.properties, ss_key, NULL);
