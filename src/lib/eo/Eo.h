@@ -831,7 +831,7 @@ typedef Eina_Error (*Efl_Object_Property_Reflection_Setter)(Eo *obj, Eina_Value 
 /**
  * Getter type which is used to get an #Eina_Value, this function should access one particular property field
  */
-typedef Eina_Value (*Efl_Object_Property_Reflection_Getter)(Eo *obj);
+typedef Eina_Value (*Efl_Object_Property_Reflection_Getter)(const Eo *obj);
 
 /**
  * @struct _Efl_Object_Property_Reflection
