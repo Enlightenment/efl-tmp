@@ -1210,7 +1210,7 @@ add_tests:
    ADD_TEST(NULL, "Evas", "Gfx Filters", test_gfx_filters);
    ADD_TEST(NULL, "Evas", "Snapshot", test_evas_snapshot);
    ADD_TEST(NULL, "Evas", "Map", test_evas_map);
-   ADD_TEST_EO(NULL, "Evas", "Efl.Gfx.Map", test_efl_gfx_map);
+   ADD_TEST_EO(NULL, "Evas", "Efl.Gfx.Mapping", test_efl_gfx_map);
 
    //------------------------------//
    ADD_TEST(NULL, "Widgets Disable/Enable", "Box", test_box_disable);

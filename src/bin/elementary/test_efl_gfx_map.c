@@ -6,29 +6,29 @@
 static void
 _map_set(Evas_Object *obj)
 {
-   efl_gfx_map_reset(obj);
-   efl_gfx_map_point_count_set(obj, 8);
+   efl_gfx_mapping_reset(obj);
+   efl_gfx_mapping_point_count_set(obj, 8);
    //1st rect
-   efl_gfx_map_coord_absolute_set(obj, 0, 100, 0, 0);
-   efl_gfx_map_coord_absolute_set(obj, 1, 200, 0, 0);
-   efl_gfx_map_coord_absolute_set(obj, 2, 200, 100, 0);
-   efl_gfx_map_coord_absolute_set(obj, 3, 100, 100, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 0, 100, 0, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 1, 200, 0, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 2, 200, 100, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 3, 100, 100, 0);
    //2nd rect
-   efl_gfx_map_coord_absolute_set(obj, 4, 200, 0, 0);
-   efl_gfx_map_coord_absolute_set(obj, 5, 100, 200, 0);
-   efl_gfx_map_coord_absolute_set(obj, 6, 100, 300, 0);
-   efl_gfx_map_coord_absolute_set(obj, 7, 200, 100, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 4, 200, 0, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 5, 100, 200, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 6, 100, 300, 0);
+   efl_gfx_mapping_coord_absolute_set(obj, 7, 200, 100, 0);
 
    //uv: 1st rect: uv: [0-1]
-   efl_gfx_map_uv_set(obj, 0, 0, 0);
-   efl_gfx_map_uv_set(obj, 1, 0.5, 0);
-   efl_gfx_map_uv_set(obj, 2, 0.5, 1);
-   efl_gfx_map_uv_set(obj, 3, 0, 1);
+   efl_gfx_mapping_uv_set(obj, 0, 0, 0);
+   efl_gfx_mapping_uv_set(obj, 1, 0.5, 0);
+   efl_gfx_mapping_uv_set(obj, 2, 0.5, 1);
+   efl_gfx_mapping_uv_set(obj, 3, 0, 1);
    //uv: 2nd rect
-   efl_gfx_map_uv_set(obj, 4, 0.5, 0);
-   efl_gfx_map_uv_set(obj, 5, 1, 0);
-   efl_gfx_map_uv_set(obj, 6, 1, 1);
-   efl_gfx_map_uv_set(obj, 7, 0.5, 1);
+   efl_gfx_mapping_uv_set(obj, 4, 0.5, 0);
+   efl_gfx_mapping_uv_set(obj, 5, 1, 0);
+   efl_gfx_mapping_uv_set(obj, 6, 1, 1);
+   efl_gfx_mapping_uv_set(obj, 7, 0.5, 1);
 }
 
 static void
