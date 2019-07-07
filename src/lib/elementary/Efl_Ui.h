@@ -248,6 +248,7 @@ typedef Eo Efl_Ui_Active_View_Indicator;
 # include <efl_ui_clickable_util.eo.h>
 # include <efl_ui_format.eo.h>
 # include <efl_ui_spin.eo.h>
+# include <efl_ui_spin_button.eo.h>
 
 /**
  * Initialize Elementary
